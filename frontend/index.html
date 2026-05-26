@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div class="splash" id="splash">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="logo-container">
+      <svg class="logo" width="90" height="90" viewBox="0 0 90 90">
+        <defs>
+          <linearGradient id="trail" x1="100%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#85B7EB" stop-opacity="0"/>
+            <stop offset="55%" stop-color="#378ADD" stop-opacity="0.7"/>
+            <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="45" cy="45" rx="32" ry="22" transform="rotate(-30 45 45)" fill="none" stroke="#1a3a5c" stroke-width="4"/>
+        <ellipse cx="45" cy="45" rx="32" ry="22" transform="rotate(-30 45 45)" fill="none" stroke="url(#trail)" stroke-width="6" stroke-dasharray="140 50" stroke-linecap="round"/>
+        <path d="M70 14 C70 14 72 22 80 23 C72 24 70 32 70 32 C70 32 68 24 60 23 C68 22 70 14 70 14Z" fill="#fff"/>
+        <path d="M20 58 C20 58 22 66 30 67 C22 68 20 76 20 76 C20 76 18 68 10 67 C18 66 20 58 20 58Z" fill="#378ADD" opacity="0.9"/>
+      </svg>
+      <h1 class="app-name">NOVA</h1>
+      <p class="tagline">Share your moment</p>
+    </div>
+    <div class="buttons">
+      <button class="btn-primary" onclick="showPage('inscription')">Créer un compte</button>
+      <button class="btn-secondary" onclick="showPage('connexion')">Se connecter</button>
+    </div>
+  </div>
+
+  <div class="page" id="inscription">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="form-container">
+      <div class="form-logo">
+        <svg width="32" height="32" viewBox="0 0 90 90">
+          <defs>
+            <linearGradient id="trail2" x1="100%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#85B7EB" stop-opacity="0"/>
+              <stop offset="55%" stop-color="#378ADD" stop-opacity="0.7"/>
+              <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="45" cy="45" rx="32" ry="22" transform="rotate(-30 45 45)" fill="none" stroke="#1a3a5c" stroke-width="4"/>
+          <ellipse cx="45" cy="45" rx="32" ry="22" transform="rotate(-30 45 45)" fill="none" stroke="url(#trail2)" stroke-width="6" stroke-dasharray="140 50" stroke-linecap="round"/>
+          <path d="M70 14 C70 14 72 22 80 23 C72 24 70 32 70 32 C70 32 68 24 60 23 C68 22 70 14 70 14Z" fill="#fff"/>
+          <path d="M20 58 C20 58 22 66 30 67 C22 68 20 76 20 76 C20 76 18 68 10 67 C18 66 20 58 20 58Z" fill="#378ADD" opacity="0.9"/>
+        </svg>
+        <span>NOVA</span>
+      </div>
+      <h2>Créer un compte</h2>
+      <p class="subtitle">Rejoins la communauté Nova</p>
+      <div class="form-group">
+        <label>NOM D'UTILISATEUR</label>
+        <input type="text" id="reg-username" placeholder="@username">
+      </div>
+      <div class="form-group">
+        <label>EMAIL</label>
+        <input type="email" id="reg-email" placeholder="email@exemple.com">
+      </div>
+      <div class="form-group">
+        <label>MOT DE PASSE</label>
+        <input type="password" id="reg-password" placeholder="••••••••">
+      </div>
+      <div class="form-group">
+        <label>DATE DE NAISSANCE</label>
+        <input type="date" id="reg-date">
+      </div>
+      <p class="error-msg" id="reg-error"></p>
+      <button class="btn-primary" onclick="inscription()">S'inscrire</button>
+      <p class="switch-page">Déjà un compte ? <span onclick="showPage('connexion')">Se connecter</span></p>
+    </div>
+  </div>
+
+  <div class="page" id="connexion">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="form-container">
+      <div class="form-logo">
+        <svg width="32" height="32" viewBox="0 0 90 90">
+          <defs>
+            <linearGradient id="trail3" x1="100%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#85B7EB" stop-opacity="0"/>
+              <stop offset="55%" stop-color="#378ADD" stop-opacity="0.7"/>
+              <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="45" cy="45" rx="32" ry="22" transform="rotate(-30 45 45)" fill="none" stroke="#1a3a5c" stroke-width="4"/>
+          <ellipse cx="45" cy="45" rx="32" ry="22" transform="rotate(-30 45 45)" fill="none" stroke="url(#trail3)" stroke-width="6" stroke-dasharray="140 50" stroke-linecap="round"/>
+          <path d="M70 14 C70 14 72 22 80 23 C72 24 70 32 70 32 C70 32 68 24 60 23 C68 22 70 14 70 14Z" fill="#fff"/>
+          <path d="M20 58 C20 58 22 66 30 67 C22 68 20 76 20 76 C20 76 18 68 10 67 C18 66 20 58 20 58Z" fill="#378ADD" opacity="0.9"/>
+        </svg>
+        <span>NOVA</span>
+      </div>
+      <h2>Bon retour</h2>
+      <p class="subtitle">Content de te revoir sur Nova</p>
+      <div class="form-group">
+        <label>EMAIL</label>
+        <input type="email" id="con-email" placeholder="email@exemple.com">
+      </div>
+      <div class="form-group">
+        <label>MOT DE PASSE</label>
+        <input type="password" id="con-password" placeholder="••••••••">
+      </div>
+      <p class="forgot">Mot de passe oublié ?</p>
+      <p class="error-msg" id="con-error"></p>
+      <button class="btn-primary" onclick="connexion()">Se connecter</button>
+      <p class="switch-page">Pas de compte ? <span onclick="showPage('inscription')">S'inscrire</span></p>
+    </div>
+  </div>
+
+<div class="page" id="flow">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div style="z-index:1; text-align:center;">
+    <p style="color:#7F77DD; font-size:20px;">Bienvenue sur Nova !</p>
+    <p style="color:#6b6480; margin-top:8px;">Le Flow arrive bientôt...</p>
+    <button onclick="deconnexion()" style="margin-top:24px; background:transparent; border:0.5px solid #2e2a3e; color:#fff; padding:12px 24px; border-radius:999px; font-size:14px; cursor:pointer;">Se déconnecter</button>
+  </div>
+</div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
